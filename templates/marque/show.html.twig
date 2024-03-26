@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<h1>{{marque.nom}}</h1>
+<p>Créé le {{marque.dateCreation|date('d/m/Y à H:i:s')}}</p>
+<img src="{{asset('uploads/'~ marque.logo)}}">
+
+<h2>Modifier la marque</h2>
+{{ form(edit) }}
+{% endblock %}
